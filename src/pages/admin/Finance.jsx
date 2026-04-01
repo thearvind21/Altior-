@@ -4,15 +4,15 @@ import { transactionsData, formatCurrency } from '../../data/mockData';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
 
 const MONTHLY_REVENUE = [
-  { month: 'Oct', revenue: 12400 }, { month: 'Nov', revenue: 18900 },
-  { month: 'Dec', revenue: 15200 }, { month: 'Jan', revenue: 24500 },
-  { month: 'Feb', revenue: 31200 }, { month: 'Mar', revenue: 28700 },
+  { month: 'Oct', revenue: 124000 }, { month: 'Nov', revenue: 189000 },
+  { month: 'Dec', revenue: 152000 }, { month: 'Jan', revenue: 245000 },
+  { month: 'Feb', revenue: 312000 }, { month: 'Mar', revenue: 287000 },
 ];
 
 const METHOD_DATA = [
-  { method: 'UPI', amount: 5996, count: 5 },
-  { method: 'Card', amount: 9796, count: 5 },
-  { method: 'NetBanking', amount: 5298, count: 2 },
+  { method: 'UPI', amount: 94960, count: 5 },
+  { method: 'Card', amount: 62960, count: 5 },
+  { method: 'NetBanking', amount: 52980, count: 2 },
 ];
 
 const STATUS_BADGE = {

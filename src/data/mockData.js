@@ -276,17 +276,17 @@ export const participantsData = [
 ];
 
 export const transactionsData = [
-  { id: "txn-0001", participantId: "p-001", name: "Aditya Kumar", event: "Tech Summit 2026", amount: 2499, status: "success", method: "UPI", date: "2026-03-10T09:35:00Z", txnRef: "UPI2026031001" },
-  { id: "txn-0002", participantId: "p-002", name: "Sneha Reddy", event: "Tech Summit 2026", amount: 2499, status: "success", method: "Card", date: "2026-03-11T14:25:00Z", txnRef: "CARD2026031102" },
-  { id: "txn-0003", participantId: "p-003", name: "Rahul Patel", event: "Design Forward 2026", amount: 1799, status: "pending", method: "NetBanking", date: "2026-03-12T11:05:00Z", txnRef: "NB2026031203" },
-  { id: "txn-0004", participantId: "p-004", name: "Pooja Sharma", event: "Tech Summit 2026", amount: 2499, status: "success", method: "UPI", date: "2026-03-13T16:50:00Z", txnRef: "UPI2026031304" },
-  { id: "txn-0005", participantId: "p-006", name: "Arjun Mishra", event: "Climate & Code Hackathon", amount: 499, status: "success", method: "UPI", date: "2026-03-15T10:20:00Z", txnRef: "UPI2026031506" },
-  { id: "txn-0006", participantId: "p-007", name: "Divya Gupta", event: "FinTech Innovations 2026", amount: 3499, status: "success", method: "Card", date: "2026-03-16T13:05:00Z", txnRef: "CARD2026031607" },
-  { id: "txn-0007", participantId: "p-008", name: "Sanjay Iyer", event: "Tech Summit 2026", amount: -2499, status: "refunded", method: "UPI", date: "2026-03-18T10:00:00Z", txnRef: "REF2026031808" },
-  { id: "txn-0008", participantId: "p-009", name: "Priya Menon", event: "Women in Leadership Forum", amount: 1999, status: "success", method: "Card", date: "2026-03-18T12:35:00Z", txnRef: "CARD2026031809" },
-  { id: "txn-0009", participantId: "p-010", name: "Nikhil Agarwal", event: "FinTech Innovations 2026", amount: 3499, status: "pending", method: "NetBanking", date: "2026-03-19T15:50:00Z", txnRef: "NB2026031910" },
-  { id: "txn-0010", participantId: "p-011", name: "Ananya Das", event: "Climate & Code Hackathon", amount: 499, status: "success", method: "UPI", date: "2026-03-20T11:25:00Z", txnRef: "UPI2026032011" },
-  { id: "txn-0011", participantId: "p-012", name: "Rohit Verma", event: "Design Forward 2026", amount: 1799, status: "success", method: "Card", date: "2026-03-21T09:50:00Z", txnRef: "CARD2026032112" },
+  { id: "txn-0001", participantId: "p-001", name: "Aditya Kumar", event: "Tech Summit 2026", amount: 24990, status: "success", method: "UPI", date: "2026-03-10T09:35:00Z", txnRef: "UPI2026031001" },
+  { id: "txn-0002", participantId: "p-002", name: "Sneha Reddy", event: "Tech Summit 2026", amount: 24990, status: "success", method: "Card", date: "2026-03-11T14:25:00Z", txnRef: "CARD2026031102" },
+  { id: "txn-0003", participantId: "p-003", name: "Rahul Patel", event: "Design Forward 2026", amount: 17990, status: "pending", method: "NetBanking", date: "2026-03-12T11:05:00Z", txnRef: "NB2026031203" },
+  { id: "txn-0004", participantId: "p-004", name: "Pooja Sharma", event: "Tech Summit 2026", amount: 24990, status: "success", method: "UPI", date: "2026-03-13T16:50:00Z", txnRef: "UPI2026031304" },
+  { id: "txn-0005", participantId: "p-006", name: "Arjun Mishra", event: "Climate & Code Hackathon", amount: 34990, status: "success", method: "UPI", date: "2026-03-15T10:20:00Z", txnRef: "UPI2026031506" },
+  { id: "txn-0006", participantId: "p-007", name: "Divya Gupta", event: "FinTech Innovations 2026", amount: 14990, status: "success", method: "Card", date: "2026-03-16T13:05:00Z", txnRef: "CARD2026031607" },
+  { id: "txn-0007", participantId: "p-008", name: "Sanjay Iyer", event: "Tech Summit 2026", amount: -24990, status: "refunded", method: "UPI", date: "2026-03-18T10:00:00Z", txnRef: "REF2026031808" },
+  { id: "txn-0008", participantId: "p-009", name: "Priya Menon", event: "Women in Leadership Forum", amount: 12990, status: "success", method: "Card", date: "2026-03-18T12:35:00Z", txnRef: "CARD2026031809" },
+  { id: "txn-0009", participantId: "p-010", name: "Nikhil Agarwal", event: "FinTech Innovations 2026", amount: 34990, status: "pending", method: "NetBanking", date: "2026-03-19T15:50:00Z", txnRef: "NB2026031910" },
+  { id: "txn-0010", participantId: "p-011", name: "Ananya Das", event: "Climate & Code Hackathon", amount: 9990, status: "success", method: "UPI", date: "2026-03-20T11:25:00Z", txnRef: "UPI2026032011" },
+  { id: "txn-0011", participantId: "p-012", name: "Rohit Verma", event: "Design Forward 2026", amount: 9990, status: "success", method: "Card", date: "2026-03-21T09:50:00Z", txnRef: "CARD2026032112" },
 ];
 
 // Revenue chart data (monthly)
