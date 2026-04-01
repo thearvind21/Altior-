@@ -24,19 +24,10 @@
   text-decoration: none;
 }
 
-.logo-icon {
-  width: 32px;
+.logo-img {
   height: 32px;
-  background: var(--primary);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: 1rem;
-  color: #fff;
-  flex-shrink: 0;
+  width: auto;
+  border-radius: 4px;
 }
 
 .logo-text {

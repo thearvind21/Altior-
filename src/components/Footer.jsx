@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <div className="footer-logo">
-              <span className="logo-icon">A</span>
+              <img src="/images/logo.webp" alt="Altior Logo" className="logo-img" style={{ height: '32px' }} />
               <span className="logo-text">Altior</span>
             </div>
             <p className="footer-tagline">
@@ -45,7 +45,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4 className="footer-col-title">Company</h4>
             <ul className="footer-links-list">
-              <li><a href="#">About</a></li>
+              <li><Link to="/about">About</Link></li>
               <li><a href="#">Contact</a></li>
               <li><a href="#">Privacy</a></li>
               <li><a href="#">Terms</a></li>

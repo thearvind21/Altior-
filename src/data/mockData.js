@@ -18,7 +18,7 @@ export const eventsData = [
     price: 2499,
     currency: "INR",
     capacity: 500,
-    registered: 387,
+    registered: 325,
     status: "upcoming",
     featured: true,
     image: null,
@@ -62,7 +62,7 @@ export const eventsData = [
     price: 1799,
     currency: "INR",
     capacity: 250,
-    registered: 198,
+    registered: 162,
     status: "upcoming",
     featured: true,
     image: null,
@@ -105,7 +105,7 @@ export const eventsData = [
     price: 0,
     currency: "INR",
     capacity: 150,
-    registered: 143,
+    registered: 98,
     status: "upcoming",
     featured: false,
     image: null,
@@ -146,7 +146,7 @@ export const eventsData = [
     price: 3499,
     currency: "INR",
     capacity: 300,
-    registered: 89,
+    registered: 195,
     status: "upcoming",
     featured: true,
     image: null,
@@ -189,7 +189,7 @@ export const eventsData = [
     price: 499,
     currency: "INR",
     capacity: 400,
-    registered: 311,
+    registered: 260,
     status: "upcoming",
     featured: false,
     image: null,
@@ -231,7 +231,7 @@ export const eventsData = [
     price: 1999,
     currency: "INR",
     capacity: 200,
-    registered: 164,
+    registered: 130,
     status: "upcoming",
     featured: false,
     image: null,
@@ -291,12 +291,12 @@ export const transactionsData = [
 
 // Revenue chart data (monthly)
 export const revenueChartData = [
-  { month: "Oct", revenue: 12400, registrations: 48 },
-  { month: "Nov", revenue: 18900, registrations: 67 },
-  { month: "Dec", revenue: 15200, registrations: 54 },
-  { month: "Jan", revenue: 24500, registrations: 89 },
-  { month: "Feb", revenue: 31200, registrations: 112 },
-  { month: "Mar", revenue: 28700, registrations: 98 },
+  { month: "Oct", revenue: 18000, registrations: 85 },
+  { month: "Nov", revenue: 22000, registrations: 105 },
+  { month: "Dec", revenue: 25000, registrations: 120 },
+  { month: "Jan", revenue: 28000, registrations: 140 },
+  { month: "Feb", revenue: 27000, registrations: 135 },
+  { month: "Mar", revenue: 30000, registrations: 150 },
 ];
 
 // Event registration breakdown
@@ -321,13 +321,11 @@ export const activityFeed = [
 
 // Computed KPIs
 export const getKPIs = () => {
-  const totalRevenue = transactionsData
-    .filter(t => t.status === "success")
-    .reduce((sum, t) => sum + t.amount, 0);
+  const totalRevenue = 157920; // Targeted ~150k+
   
-  const totalRegistrations = participantsData.filter(p => p.status !== "cancelled").length;
+  const totalRegistrations = 1170; // 65% of 1800
   const totalEvents = eventsData.length;
-  const avgConversion = Math.round((totalRegistrations / eventsData.reduce((sum, e) => sum + e.capacity, 0)) * 100);
+  const avgConversion = 65;
   
   return {
     totalRevenue,

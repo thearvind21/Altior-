@@ -10,7 +10,7 @@ const FEATURES = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
+        <rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" />
       </svg>
     ),
     title: 'QR Check-In',
@@ -20,7 +20,7 @@ const FEATURES = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <circle cx="12" cy="8" r="7"/><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+        <circle cx="12" cy="8" r="7" /><polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88" />
       </svg>
     ),
     title: 'Digital Certificates',
@@ -30,7 +30,7 @@ const FEATURES = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
       </svg>
     ),
     title: 'Live Analytics',
@@ -40,8 +40,8 @@ const FEATURES = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
     title: 'Team & Committees',
@@ -59,22 +59,22 @@ const STATS = [
 
 const TESTIMONIALS = [
   {
-    quote: "Altior transformed how we run Tech Summit. From 50 manual spreadsheets to a single dashboard — the difference is night and day.",
-    name: "Dr. Priya Nair",
-    role: "Conference Director, NASSCOM",
-    avatar: "PN",
+    quote: "Participating as a delegate at ALTIOR Delhi MUN this year was an inspiring and advantageous experience. The conference was impeccably organized, building an atmosphere of intellectual engagement and collaboration. The emphasis on critical thinking and diplomacy allowed me to grow both personally and academically.",
+    name: "Harmanpreet Kaur",
+    role: "Delegate at Altior Delhi MUN 2.0",
+    avatar: "HK",
   },
   {
-    quote: "The QR check-in feature alone saved us 2 hours of chaos on event day. Our team was blown away by how smooth it was.",
-    name: "Arjun Bose",
-    role: "Head of Events, IIT Bombay",
-    avatar: "AB",
+    quote: "Participating as a delegate at the Altior MUN conference was a transformative experience. It challenged my critical thinking, enhanced my public speaking, and deepened my understanding of global issues. Collaborating with passionate individuals to craft resolutions taught me the value of diplomacy and teamwork.",
+    name: "Atharv",
+    role: "Delegate at Altior Delhi MUN 2.0",
+    avatar: "AT",
   },
   {
-    quote: "Best-in-class UI and the analytics dashboard gave us insights we never had before. Highly recommend for any serious event organizer.",
-    name: "Meera Kapoor",
-    role: "Founder, DesignWeek India",
-    avatar: "MK",
+    quote: "Attending ADMUN 2.0 was one of the best experiences in my MUN journey so far. The engaging debates, well organised sessions and diverse perspectives improved my understanding. The vibrant atmosphere, supporting peers and excellent secretariat team encouraged many. They also provided begginers friendly commitee for the newbies.",
+    name: "Upasana",
+    role: "Delegate at Altior Delhi MUN 2.0",
+    avatar: "UP",
   },
 ];
 
@@ -105,30 +105,26 @@ export default function Landing() {
           <div className="hero-badge">
             <span className="badge badge-green">
               <span className="badge-dot" />
-              New — Climate & Code Hackathon is live
+              New - Climate & Code Hackathon is live
             </span>
           </div>
 
           <h1 className="hero-title">
-            Manage Events
+            Altior Group
             <br />
-            <span className="gradient-text">Like Never Before</span>
+            <span className="gradient-text">Elevating Education, Empowering Futures</span>
           </h1>
 
           <p className="hero-subtitle">
-            Altior is the premium event management platform built for modern organizations.
-            From registration to analytics — everything in one place.
+            Altior Group is a leading educational services provider dedicated to shaping brighter futures through innovation, excellence, and unwavering commitment to student success.
           </p>
 
           <div className="hero-actions">
             <Link to="/events" className="btn btn-primary btn-lg">
               Explore Events
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </Link>
-            <Link to="/admin/login" className="btn btn-outline btn-lg">
-              Admin Dashboard
             </Link>
           </div>
 
@@ -194,7 +190,7 @@ export default function Landing() {
             <Link to="/events" className="btn btn-outline btn-lg">
               View All Events
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </Link>
           </div>
@@ -300,7 +296,7 @@ export default function Landing() {
         <div className="container">
           <div className="cta-inner">
             <div className="cta-glow" />
-            <h2 className="cta-title">Ready to Transform<br/>Your Events?</h2>
+            <h2 className="cta-title">Ready to Transform<br />Your Events?</h2>
             <p className="cta-subtitle">
               Join 5,000+ attendees who've experienced the future of event management.
             </p>

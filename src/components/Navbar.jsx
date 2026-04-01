@@ -9,6 +9,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
     { label: 'Events', href: '/events' },
   ];
 
@@ -19,9 +20,8 @@ export default function Navbar() {
       <div className="navbar-inner container">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <span className="logo-icon">A</span>
+          <img src="/images/logo.webp" alt="Altior Logo" className="logo-img" />
           <span className="logo-text">Altior</span>
-          <span className="logo-badge">EVENTS</span>
         </Link>
 
         {/* Nav Links */}

@@ -8,6 +8,7 @@ import Events from './pages/Events';
 import EventDetail from './pages/EventDetail';
 import Register from './pages/Register';
 import Success from './pages/Success';
+import About from './pages/About';
 
 // Admin pages
 import AdminLogin from './pages/admin/Login';
@@ -24,6 +25,7 @@ export default function App() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<Landing />} />
+          <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/:id" element={<EventDetail />} />
           <Route path="/register/:id" element={<Register />} />

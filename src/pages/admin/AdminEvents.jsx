@@ -13,6 +13,10 @@ export default function AdminEvents() {
   const [view, setView] = useState('grid'); // grid | table
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('All');
+  const [showAddModal, setShowAddModal] = useState(false);
+  const [newEvent, setNewEvent] = useState({
+    title: '', category: 'Technology', date: '', city: 'Delhi', price: 0, capacity: 100
+  });
 
   const categories = ['All', ...new Set(eventsData.map(e => e.category))];
 
@@ -22,6 +26,23 @@ export default function AdminEvents() {
     const matchCat = categoryFilter === 'All' || e.category === categoryFilter;
     return matchSearch && matchCat;
   });
+
+  const handleAddEvent = (e) => {
+    e.preventDefault();
+    const id = `evt-${Date.now()}`;
+    const addedEvent = {
+      ...newEvent,
+      id,
+      slug: newEvent.title.toLowerCase().replace(/ /g, '-'),
+      registered: 0,
+      status: 'upcoming',
+      featured: false,
+      color: CATEGORY_COLORS[newEvent.category]
+    };
+    eventsData.unshift(addedEvent);
+    setShowAddModal(false);
+    setNewEvent({ title: '', category: 'Technology', date: '', city: 'Delhi', price: 0, capacity: 100 });
+  };
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh' }}>
@@ -61,7 +82,13 @@ export default function AdminEvents() {
                 </button>
               ))}
             </div>
-            <button className="btn btn-primary btn-sm" id="add-event-btn">+ Add Event</button>
+            <button
+              className="btn btn-primary btn-sm"
+              id="add-event-btn"
+              onClick={() => setShowAddModal(true)}
+            >
+              + Add Event
+            </button>
           </div>
         </div>
 
@@ -221,6 +248,53 @@ export default function AdminEvents() {
           )}
         </div>
       </main>
+
+      {/* Add Event Modal */}
+      {showAddModal && (
+        <div style={{
+          position: 'fixed', inset: 0, zIndex: 100, display: 'flex', alignItems: 'center', justifyContent: 'center',
+          background: 'rgba(0,0,0,0.8)', padding: 20
+        }}>
+          <div style={{
+            background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 'var(--radius-lg)',
+            padding: 'var(--space-8)', width: '100%', maxWidth: 500, boxShadow: 'var(--shadow-xl)'
+          }}>
+            <h2 className="section-title" style={{ fontSize: '1.2rem', marginBottom: 'var(--space-6)' }}>Add New Event</h2>
+            <form onSubmit={handleAddEvent} style={{ display: 'grid', gap: 'var(--space-4)' }}>
+              <div>
+                <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginBottom: 4 }}>Event Title</label>
+                <input required className="form-input" value={newEvent.title} onChange={e => setNewEvent({...newEvent, title: e.target.value})} />
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-4)' }}>
+                <div>
+                  <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginBottom: 4 }}>Category</label>
+                  <select className="form-input" value={newEvent.category} onChange={e => setNewEvent({...newEvent, category: e.target.value})}>
+                    {Object.keys(CATEGORY_COLORS).map(c => <option key={c} value={c}>{c}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginBottom: 4 }}>Date</label>
+                  <input type="date" required className="form-input" value={newEvent.date} onChange={e => setNewEvent({...newEvent, date: e.target.value})} />
+                </div>
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 'var(--space-4)' }}>
+                <div>
+                  <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginBottom: 4 }}>City</label>
+                  <input required className="form-input" value={newEvent.city} onChange={e => setNewEvent({...newEvent, city: e.target.value})} />
+                </div>
+                <div>
+                  <label style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginBottom: 4 }}>Registration Price (₹)</label>
+                  <input type="number" required className="form-input" value={newEvent.price} onChange={e => setNewEvent({...newEvent, price: Number(e.target.value)})} />
+                </div>
+              </div>
+              <div style={{ marginTop: 'var(--space-4)', display: 'flex', gap: 'var(--space-3)' }}>
+                <button type="submit" className="btn btn-primary flex-1">Create Event</button>
+                <button type="button" className="btn btn-outline" onClick={() => setShowAddModal(false)}>Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
