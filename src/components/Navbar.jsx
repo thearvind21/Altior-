@@ -40,7 +40,7 @@ export default function Navbar() {
 
         {/* Right Actions */}
         <div className="navbar-actions">
-          <Link to="/events" className="btn btn-primary btn-sm">
+          <Link to="/events" className="btn btn-primary btn-sm btn-browse">
             Browse Events
           </Link>
           {/* Hamburger */}

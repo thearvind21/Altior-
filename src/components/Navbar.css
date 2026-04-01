@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(11, 15, 26, 0.85);
-  backdrop-filter: blur(20px);
+  background: rgba(5, 8, 15, 0.8);
+  backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   transition: var(--transition);
 }
@@ -42,8 +42,9 @@
 .logo-text {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: var(--text-xl);
   color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
 .logo-badge {
@@ -67,10 +68,10 @@
 .nav-link {
   display: flex;
   align-items: center;
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius);
-  font-size: 0.9rem;
-  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: 600;
   color: var(--text-secondary);
   text-decoration: none;
   transition: var(--transition);
@@ -78,7 +79,7 @@
 
 .nav-link:hover {
   color: var(--text-primary);
-  background: var(--surface);
+  background: var(--surface-elevated);
 }
 
 .nav-link.active {
@@ -91,6 +92,16 @@
   display: flex;
   align-items: center;
   gap: var(--space-3);
+}
+
+.navbar-actions .btn-browse {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbar-actions .btn-browse {
+    display: inline-flex;
+  }
 }
 
 /* Hamburger */

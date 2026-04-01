@@ -109,7 +109,7 @@ export default function EventCard({ event, variant = 'default' }) {
         .event-card {
           background: var(--surface);
           border: 1px solid var(--border);
-          border-radius: var(--radius-md);
+          border-radius: var(--radius);
           overflow: hidden;
           transition: var(--transition-slow);
           display: flex;
@@ -118,8 +118,8 @@ export default function EventCard({ event, variant = 'default' }) {
         }
         .event-card:hover {
           border-color: var(--border-light);
-          transform: translateY(-4px);
-          box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+          transform: translateY(-6px);
+          box-shadow: var(--shadow-lg);
         }
         .event-card-header {
           position: relative;
@@ -129,56 +129,90 @@ export default function EventCard({ event, variant = 'default' }) {
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
+          gap: var(--space-2);
+        }
+        @media (min-width: 768px) {
+          .event-card-header {
+            padding: var(--space-8);
+            min-height: 160px;
+          }
         }
         .event-card-glow {
           position: absolute;
-          top: -30px; right: -30px;
-          width: 100px; height: 100px;
+          top: -40px; right: -40px;
+          width: 120px; height: 120px;
           border-radius: 50%;
-          opacity: 0.08;
-          filter: blur(20px);
+          opacity: 0.1;
+          filter: blur(30px);
         }
         .event-card-pattern {
           position: absolute;
-          right: -10px; top: -10px;
-          opacity: 0.6;
+          right: -20px; top: -20px;
+          opacity: 0.4;
         }
         .event-card-top {
           display: flex;
           gap: var(--space-2);
-          margin-bottom: var(--space-3);
-          position: relative;
+          position: absolute;
+          top: var(--space-5);
+          left: var(--space-5);
           z-index: 1;
+        }
+        @media (min-width: 768px) {
+          .event-card-top {
+            top: var(--space-6);
+            left: var(--space-6);
+          }
         }
         .event-card-title {
           font-family: var(--font-display);
-          font-size: 1.1rem;
-          font-weight: 700;
+          font-size: 1.25rem;
+          font-weight: 800;
           color: var(--text-primary);
-          line-height: 1.3;
+          line-height: 1.2;
           position: relative;
           z-index: 1;
+          letter-spacing: -0.01em;
+        }
+        @media (min-width: 768px) {
+          .event-card-title {
+            font-size: var(--text-2xl);
+            letter-spacing: -0.02em;
+          }
         }
         .event-card-body {
-          padding: var(--space-5);
+          padding: var(--space-6);
           display: flex;
           flex-direction: column;
-          gap: var(--space-4);
+          gap: var(--space-5);
           flex: 1;
+        }
+        @media (min-width: 768px) {
+          .event-card-body {
+            padding: var(--space-8);
+            gap: var(--space-6);
+          }
         }
         .event-meta {
           display: flex;
           gap: var(--space-4);
+          flex-wrap: wrap;
+        }
+        @media (min-width: 768px) {
+          .event-meta {
+            gap: var(--space-6);
+          }
         }
         .event-meta-item {
           display: flex;
           align-items: center;
-          gap: 6px;
-          font-size: 0.8rem;
+          gap: 8px;
+          font-size: var(--text-sm);
           color: var(--text-secondary);
+          font-weight: 500;
         }
         .event-card-desc {
-          font-size: 0.85rem;
+          font-size: var(--text-sm);
           color: var(--text-muted);
           line-height: 1.6;
         }
@@ -186,10 +220,10 @@ export default function EventCard({ event, variant = 'default' }) {
         .event-capacity-info {
           display: flex;
           justify-content: space-between;
-          margin-bottom: var(--space-2);
+          margin-bottom: var(--space-3);
         }
         .capacity-bar {
-          height: 4px;
+          height: 6px;
           background: var(--surface-elevated);
           border-radius: var(--radius-full);
           overflow: hidden;
@@ -197,40 +231,48 @@ export default function EventCard({ event, variant = 'default' }) {
         .capacity-fill {
           height: 100%;
           border-radius: var(--radius-full);
-          transition: width 0.5s ease;
+          transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .event-card-footer {
           display: flex;
           align-items: center;
           justify-content: space-between;
+          padding-top: var(--space-2);
         }
         .event-price {
           display: flex;
           flex-direction: column;
         }
         .price-free {
-          font-size: 1.1rem;
-          font-weight: 700;
+          font-size: var(--text-xl);
+          font-weight: 800;
           color: var(--success);
         }
         .price-amount {
-          font-size: 1.1rem;
-          font-weight: 700;
+          font-size: var(--text-xl);
+          font-weight: 800;
           color: var(--text-primary);
         }
         .price-label {
-          font-size: 0.7rem;
+          font-size: 11px;
           color: var(--text-muted);
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
         }
         .event-card-link {
-          font-size: 0.8rem;
-          font-weight: 600;
+          font-size: var(--text-sm);
+          font-weight: 700;
           color: var(--primary-light);
           text-decoration: none;
           transition: var(--transition);
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
         }
         .event-card-link:hover {
-          color: var(--gold);
+          color: var(--gold-light);
+          gap: 8px;
         }
       `}</style>
     </div>
